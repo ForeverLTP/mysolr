@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+<link type="text/css" rel="stylesheet" href="css/common.css" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+<!-- 先加载jq之后才加载js,否则报错(bootstrap) -->
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<style type="text/css">
+.title {
+	font-size: 16px;
+	font-weight: bolder;
+}
+
+.panel-group {
+	margin-top: 20px;
+}
+</style>
+
+</head>
+<body>
+	<div id="container">
+
+		<ul class="nav nav-pills">
+			<li><a href="init.action">首页</a></li>
+			<li><a href="#">知识科普</a></li>
+			<li><a href="IndicationsInit.action">处方信息</a></li>
+			<li class="dropdown"><a class="dropdown-toggle"
+				data-toggle="dropdown" href="#">合理用药规则库 <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="initInteraction.action">相互作用</a></li>
+					<li><a href="initSpecial.action">特殊人群用药</a></li>
+				</ul></li>
+			<li class="dropdown"><a class="dropdown-toggle"
+				data-toggle="dropdown" href="#">合理用药知识库 <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="getInstruction.action">说明书</a></li>
+					<li><a href="getLiterature.action">文献知识库</a></li>
+					<li><a href="initDiseaseCure.action">疾病诊治标准</a></li>
+					<li><a href="indicationsmodel.html">标准处方模板</a></li>
+					<li><a href="#">标准医嘱模板</a></li>
+				</ul></li>
+			<li><a href="#">系统设置</a></li>
+		</ul>
+
+		<div class="panel-group" id="accordion">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion"
+							href="#collapseOne" class="title">医嘱的书写要求及格式</a>
+					</h4>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse in">
+					<div class="panel-body">
+						医嘱的书写要求及格式<br/>
+						医嘱是指医师在医疗活动中下达的医学指令。医嘱单分为长期医嘱单和临时医嘱单。
+				
+						<br/>一、医嘱书写的基本要求
+
+						<br/>（一）取得医疗机构处方权的医师有权在本医疗机构开具医嘱。试用期人员书写的医嘱，
+						应当经所在医疗机构有处方权的执业医师审核并签名。进修医师由接收进修的医疗机构对其胜任
+						本专业工作的实际情况进行认定后授予相应的医嘱....详情请<a href="downLoad.action?downloadUrl=doc/DoctorOrder.doc&suffix=doc">查看</a>
+
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion"
+							href="#collapseTwo" class="title">长期医嘱一 </a>
+					</h4>
+				</div>
+				<div id="collapseTwo" class="panel-collapse collapse">
+					<div class="panel-body"><input type="image" src="images/advice/l1.jpg"/></div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion"
+							href="#collapseThree" class="title">长期医嘱二 </a>
+					</h4>
+				</div>
+				<div id="collapseThree" class="panel-collapse collapse">
+					<div class="panel-body">
+
+						<input type="image" src="images/advice/l2.jpg"/>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion"
+							href="#collapseFour" class="title">短期医嘱一 </a>
+					</h4>
+				</div>
+				<div id="collapseFour" class="panel-collapse collapse">
+					<div class="panel-body">
+						<input type="image" src="images/advice/s1.jpg"/>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+		</div>
+	</div>
+</body>
+</html>

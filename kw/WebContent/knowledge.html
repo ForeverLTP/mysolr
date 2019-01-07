@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+<link type="text/css" rel="stylesheet" href="css/common.css" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+<!-- 先加载jq之后才加载js,否则报错(bootstrap) -->
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<style type="text/css">
+.title {
+	font-size: 16px;
+	font-weight: bolder;
+}
+
+.panel-group {
+	margin-top: 20px;
+}
+</style>
+
+</head>
+<body>
+	<div id="container">
+
+		<ul class="nav nav-pills">
+			<li><a href="init.action">首页</a></li>
+			<li class="active"><a href="#">知识科普</a></li>
+			<li><a href="IndicationsInit.action">处方信息</a></li>
+			<li class="dropdown"><a class="dropdown-toggle"
+				data-toggle="dropdown" href="#">合理用药规则库 <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="initInteraction.action">相互作用</a></li>
+					<li><a href="initSpecial.action">特殊人群用药</a></li>
+				</ul></li>
+			<li class="dropdown"><a class="dropdown-toggle"
+				data-toggle="dropdown" href="#">合理用药知识库 <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="getInstruction.action">说明书</a></li>
+					<li><a href="getLiterature.action">文献知识库</a></li>
+					<li><a href="initDiseaseCure.action">疾病诊治标准</a></li>
+					<li><a href="indicationsmodel.html">标准处方模板</a></li>
+					<li><a href="advice.html">标准医嘱模板</a></li>
+				</ul></li>
+			<li><a href="#">系统设置</a></li>
+		</ul>
+
+		<div class="panel-group" id="accordion">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion"
+							href="#collapseOne" class="title"> 中成药 </a>
+					</h4>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse in">
+					<div class="panel-body">
+						&nbsp;&nbsp;&nbsp;&nbsp;中成药是以中药材为原料，在中医药理论指导下，为了预防及治疗疾病的需要，按规定的处方和制剂工艺将其加工制成一定剂型的中药制品，是经国家药品监督管理部门批准的商品化的一类中药制剂。因此，作为供临床应用的中成药，不但要具备相应的药名、用法用量、规格和特定的质量标准及检验方法，而且要有确切的疗效，明确的适用范围、应用禁忌与注意事项。
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion"
+							href="#collapseTwo" class="title">概念 </a>
+					</h4>
+				</div>
+				<div id="collapseTwo" class="panel-collapse collapse">
+					<div class="panel-body">&nbsp;&nbsp;&nbsp;&nbsp;以中药材为原料，在中医药理论指导下，为了预防及治疗疾病的需要，按规定的处方和制剂工艺将其加工制成一定剂型的中药制品。</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion"
+							href="#collapseThree" class="title">中成药的命名 </a>
+					</h4>
+				</div>
+				<div id="collapseThree" class="panel-collapse collapse">
+					<div class="panel-body">
+
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;中成药的命名方式基本沿袭了传统方剂的命名法，即每种中药材，中药饮片及中药提取物职称的中成药命名，都由体现方药特征与表示剂型的两部分组成。由于中成药的历史悠久，方药特征多种多样，复杂繁多，制方命名的人则往往从各自的角度出发，因而中成药的命名方式是多元的。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;1、以方剂的来源命名
+							根据处方原再书籍命名，可知其来源出处，如局方牛黄清心丸（《源于太平惠民和剂局方》），金匮肾气丸（源于张仲景《金匮要略》）。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;2、以处方组成命名
+							以组成药物味数命名，如六味地黄丸由地黄为主的六位药物组成，二冬膏由天门冬和麦冬二药组成，处方简单，则直书组成药物，如磁朱丸，板蓝根颗粒、银黄口服液等；以主药名称命名，如良附丸、参芪丸、丁桂散等、以组成药物配比命名。如六一散，有滑石6份、甘草1份组成。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;3、以中成药的功效命名
+							如理中丸指其有调理中焦之功。养血安神糖浆指其有养血安神之效。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp; 4、以处方组成和功效命名
+							取主药和功效同用，如银翘解毒片以金银花、连翘为主要，具有散风解表之功；艾附暖宫丸以艾叶、香附为主药，有暖胞宫作用。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;5、以中成药的性状命名 如云南白药为白色粉末；紫雪丹形如霜雪而色紫。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;6、以所治疾病命名
+							如白带丸、流感茶、风湿骨痛酒、小儿惊风散等，为方便临床使用及患者选择，大量新研制药多直接采用治疗病症命名。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;7、以中成药的主要成分命名 如绞股蓝总苷胶囊、绞股蓝总苷片等。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp; 8、以炮制方法、服用方法、服用剂量命名
+							服用剂量命名的如十滴水、九分散，是指一次服用的常用量，并提醒患者注意用量，常含有剧毒成分；炮制方法命名的如十灰散、九制大黄丸等。服用方法命名的如珠黄吹喉散、川芎茶调散等。</p>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion"
+							href="#collapseFour" class="title">中成药的剂型 </a>
+					</h4>
+				</div>
+				<div id="collapseFour" class="panel-collapse collapse">
+					<div class="panel-body">
+						&nbsp;&nbsp;&nbsp;&nbsp;剂型是为适应诊断、治疗或预防疾病的需要而制备的不同给药形式，也是临床使用的最终形式，药物必须以一定的剂型给予人体才发挥疗效，一种药物可以制备成多种剂型，但剂型和给药途径不同可能产生不同的疗效。常见的剂型有注射剂、口服液体剂型（溶液型、混悬剂、乳剂）、口服固体剂型（散剂、胶囊剂、片剂、丸剂）等。
+
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion"
+							href="#collapseFive" class="title">中成药的特点</a>
+					</h4>
+				</div>
+				<div id="collapseFive" class="panel-collapse collapse">
+					<div class="panel-body">
+						&nbsp;&nbsp;&nbsp;&nbsp;具有性质稳定、疗效确切、毒副作用相对较小，服用、携带、贮藏保管方便等特点。</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion"
+							href="#collapseSix" class="title">中成药的配伍</a>
+					</h4>
+				</div>
+				<div id="collapseSix" class="panel-collapse collapse">
+					<div class="panel-body">
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;根据临床治疗需要，将两个或两个以上的中成药同用的用药方法。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;1、两个或两个以上功效相似的中成药同用，以增强药效的用药方法。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp; 2、功效不同的
+							中成药配伍同用，一药为主，一药为辅，辅药能够提高主要功效。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp; 3、其中一种药物能够明显抑制或消除另一种中成药的偏性或副作用。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;4、也有些中成药的配伍是因为部分疾病的治疗必须s采用不同的治疗方法。</p>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion"
+							href="#collapseSeven" class="title">中成药用药指导 </a>
+					</h4>
+				</div>
+				<div id="collapseSeven" class="panel-collapse collapse">
+					<div class="panel-body">
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;1、与患者核对药品种类和数量，根据处方明确药品的用法用量、如用药时间、用药间隔等，对特殊剂型、如栓剂、滴眼液、贴膏剂等，需特别说明使用方法。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;2、向患者说明中成药的使用禁忌和注意事项。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;3、如有联合用药的情况，向患者交代联合用药需注意的问题，如中成药和西药，应相隔半小时左右服用。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;4、如有特殊储存的药物，提醒患者按要求储存。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;5、对特殊人群，如过敏体质、妊娠妇女，应详细询问用药史、过敏史等相关信息，避免发生药害事件。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;6、如有关于药品疗效、药品质量、不良反应等方面的咨询，应尽可能做答，如不确定，应在事后详查并予以回复</p></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

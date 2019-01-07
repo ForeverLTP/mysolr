@@ -1,0 +1,2 @@
+程序启动放在tomcat的webapps下
+solr服务器

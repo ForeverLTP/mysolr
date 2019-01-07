@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hws.mapper.SRDetailsMapper">
+	<resultMap type="com.hws.model.SRDetails" id="datails">
+		<result column="spagenumber" property="spagenumber"/>
+		<result column="sprescription" property="sprescription"/>
+		<result column="make" property="make"/>
+		<result column="identify" property="identify"/>
+		<result column="scheck" property="scheck"/>
+		<result column="standardencde" property="standardencde"/>
+		<association property="cm" javaType="com.hws.model.ChineseMedicine">
+			<result column="mcName" property="mcName"/>
+		</association>
+		<association property="srType" javaType="com.hws.model.SRType">
+			<result column="bookname" property="bookname"/>
+		</association>
+	</resultMap>
+
+	<select id="findSRDatails" parameterType="int" resultMap="datails">
+		select
+		m.mcname,m.mtraits,st.bookname,s.spagenumber,s.sprescription
+		,s.make,s.identify,s.scheck,s.standardencde from standardsource
+		s,mediciedetails m,standardtype st
+		where s.mid = m.mid and s.sresourceid = st.sresourceid and m.mid = #{value}
+	</select>
+
+</mapper>
+

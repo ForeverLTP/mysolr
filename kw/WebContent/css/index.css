@@ -1,0 +1,110 @@
+body {
+	width: 912px;
+	height: 710px;
+	background-color: white;
+	font-weight: 500;
+	font-family: "Microsoft YaHei", "ËÎÌו", "Segoe UI", "Lucida Grande",
+		Helvetica, Arial, sans-serif, FreeSans, Arimo;
+}
+
+#container {
+	width: 910px;
+	height: 705px;
+	margin-left: 10px;
+	margin-top: 2px;
+}
+
+div.search {
+	padding: 30px 0;
+}
+
+.titleSearch {
+	position: relative;
+	width: 400px;
+	margin-left: 20px;
+}
+
+input, button {
+	border: none;
+	outline: none;
+}
+
+input {
+	width: 220px;
+	height: 42px;
+	padding-left: 13px;
+}
+
+button {
+	height: 42px;
+	width: 42px;
+	cursor: pointer;
+	position: absolute;
+}
+
+.img {
+	float: left;
+	margin-left: 52px;
+	margin-top: 10px;
+}
+
+.clear {
+	clear: both;
+}
+
+.tab1 tr td input, .tab2 tr td input {
+	border: 1px solid #D6D6D6;
+	height: 32px;
+}
+
+.data th {
+	border: 1px solid #D6D6D6;
+	font-size: 14px;
+}
+
+.data tr td {
+	text-align: center;
+	border: 1px solid #D6D6D6;
+}
+
+.showData {
+	margin-top: 10px;
+	width: 910px;
+	height: 363px;
+}
+
+#fulltext, #mcname,#mcname1,#mcname2, #mingredient, #mindications, #aboveAll, #aboveNot,
+	#aboveAny, #aboveComplete {
+	height: auto;
+	display: none;
+	z-index: 99999;
+	position: absolute;
+	border-left: 1px solid #D6D6D6;
+	border-right: 1px solid #D6D6D6;
+	border-bottom: 1px solid #D6D6D6;
+	background-color: white;
+}
+
+#fulltext ul li:hover, #mcname ul li:hover, #mingredient ul li:hover,
+	#mindications ul li:hover, #aboveAll ul li:hover, #aboveNot ul li:hover,
+	#aboveAny ul li:hover, #aboveComplete ul li:hover {
+	background-color: #D6D6D6;
+}
+
+#fulltext {
+	width: 400px;
+}
+
+#mcname,#mcname1,#mcname2, #mingredient,#mindications,#aboveAll, #aboveNot, #aboveAny,
+	#aboveComplete {
+	width: 220px;
+}
+
+#errorInfo {
+	margin: auto;
+	font-size: 20px;
+	display: none;
+	position: relative;
+	top: 50%;
+	left: 25%
+}

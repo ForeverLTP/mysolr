@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hws.mapper.CMMapper">
+	
+	<sql id="cm">
+		 mid,mcname,mpname,mformulation,mingredient,manufacturer,approvalnumber,
+		mtraits,mindications,mspecification,mdosage,mnegativereactions
+		,mban,mnotice,minteraction,mstorage,mvalidity,mpackage,mpicture,tname
+		 
+	</sql>
+	<sql id="cm1">
+		 mid,mcname,mpname,mformulation,mingredient,manufacturer,approvalnumber,
+		mtraits,mindications,mspecification,mdosage,mnegativereactions
+		,mban,mnotice,minteraction,mstorage,mvalidity,mpackage,mpicture
+		 
+	</sql>
+	
+	<select id="getCM" parameterType="int"  resultType="com.hws.model.ChineseMedicine">
+		select <include refid="cm"></include> from  mediciedetails,type 
+		where type.mtypeid = mediciedetails.mtypeid and mid = #{mid}
+	</select>
+	
+	<select id="getCMByName" parameterType="String"  resultType="com.hws.model.ChineseMedicine">
+		select <include refid="cm1"></include> from  mediciedetails
+		where  mcname = #{mcname}
+	</select>
+	<select id="getAllCM"  resultType="com.hws.model.ChineseMedicine">
+		select <include refid="cm1"></include> from  mediciedetails
+	</select>
+</mapper>

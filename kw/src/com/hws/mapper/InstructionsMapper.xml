@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hws.mapper.InstructionsMapper">
+
+	<resultMap type="com.hws.model.Instructions" id="instructions">
+		<result column="iid" property="iid"/>
+		<result column="isource" property="isource"/>
+		<association property="cMedicine" javaType="com.hws.model.ChineseMedicine">
+			<result column="mcName" property="mcName"/>
+		</association>
+	</resultMap>
+	<select id="getAllInstructions" resultMap="instructions">
+		select mediciedetails.mcname,iid,mediciedetails.mid,isource from instructions,mediciedetails
+		where mediciedetails.mid = instructions.mid
+	</select>
+	
+	<resultMap type="com.hws.model.Instructions" id="instructions1">
+		<result column="iid" property="iid"/>
+		<result column="isource" property="isource"/>
+		<association property="cMedicine" javaType="com.hws.model.ChineseMedicine">
+			<result column="mcName" property="mcName"/>
+		</association>
+	</resultMap>
+	<select id="getInstructionsByName" parameterType="String" resultMap="instructions1">
+		select mediciedetails.mcname,iid,mediciedetails.mid,isource from instructions,mediciedetails
+		where mediciedetails.mid = instructions.mid and mediciedetails.mcname like #{value}
+	</select>
+</mapper>

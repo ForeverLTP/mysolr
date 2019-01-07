@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hws.mapper.DiseaseCureMapper">
+	<insert id="insertType" parameterType="java.util.List">
+		insert into diseasetype(dtypeid,onetitle,twotitle,titleaddress)
+		 values
+		 <foreach collection="list" item="item" separator=",">
+		 	(#{item.dtypeid,jdbcType=INTEGER},#{item.oneleveltitle,jdbcType=VARCHAR},#{item.twoleveltitle,jdbcType=VARCHAR},#{item.titleaddress,jdbcType=VARCHAR})
+		 </foreach>
+	</insert>
+	
+	<insert id="insertContent" parameterType="java.util.List">
+		insert into diseasecure(dtypeid,threeleveltitle,dcontent,daddress)
+		 values
+		 <foreach collection="list" item="item" separator=",">
+		 	(#{item.dtypeid,jdbcType=INTEGER},#{item.threeleveltitle,jdbcType=VARCHAR},#{item.content,jdbcType=VARCHAR},#{item.daddress,jdbcType=INTEGER})
+		 </foreach>
+	</insert>
+	<select id="findALLDC" resultType="com.hws.model.DiseaseCure">
+		select dtypeid,onetitle,twotitle from diseasetype 
+	</select>
+	<select id="findALLContent" resultType="com.hws.model.DiseaseCure">
+		select did,dtypeid,threeleveltitle,dcontent,daddress from diseasecure 
+	</select>
+</mapper>

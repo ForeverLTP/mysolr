@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF8"?> 
+<dataConfig>
+    <dataSource type="JdbcDataSource"
+				driver="com.mysql.jdbc.Driver" 
+				url="jdbc:mysql://localhost:3306/chinesemedicine" 
+				user="root" 
+				password="123"/>
+    <document>
+		
+		 
+		<!-- 主表mediciedetails -->
+        <entity  name="mediciedetails" pk="mid"
+                query="select mid,mcname,mpname,mformulation,mingredient,mtraits,mindications
+				,mspecification,mnegativereactions,mban,mnotice,minteraction,mpicture,mtypeid from mediciedetails">     
+                           
+                 <field column="mid"       				  name="id"/> 
+                 <field column="mcname"    				  name="mcname"/> 
+				 <field column="mpname"    				  name="mpname"/> 
+				 <field column="mformulation"       	  name="mformulation"/> 
+				 <field column="mingredient"       		  name="mingredient"/> 
+				 <field column="mindications"       	  name="mindications"/> 
+				 <field column="mnegativereactions"       name="mnegativereactions"/> 
+				 <field column="mtraits"       			  name="mtraits"/> 
+				 <field column="mban"       			  name="mban"/> 
+				 <field column="mnotice"       			  name="mnotice"/> 
+				 <field column="minteraction"      		  name="minteraction"/> 
+				 <field column="mpicture"       		  name="mpicture" /> 
+				 <field column="mtypeid"       		  	  name="mtypeid" /> 
+				 
+				 <!-- type表 -->
+				 <entity name="type" 
+						query="select tname from type where mtypeid = '${mediciedetails.mtypeid}'">
+						<field column="tname"       	  name="tname" /> 
+				 </entity>
+				 
+				 <!-- standardsource表 -->
+				 <entity name="standardsource" pk="mid" 
+						query="select sresourceid,sprescription,spagenumber  from standardsource where mid = '${mediciedetails.mid}'">
+						<field column="sresourceid"       		  	  		name="sresourceid" /> 
+						<field column="spagenumber"       		  	  		name="spagenumber" /> 
+						<field column="sprescription"       		  	  	name="sprescription" /> 
+						
+						<!-- standardtype表 -->
+						<entity name="standardtype" pk="sresourceid"
+							query="select bookname from standardtype where sresourceid = '${standardsource.sresourceid}'">
+							<field column="bookname"       		  	name="bookname" />
+						</entity>
+				 </entity>
+				  <entity  name="literature" pk="lid"
+						query="select literature from literature where mid = '${mediciedetails.mid}'"> 
+					<field column="literature"       		  	name="literature" />	
+				 </entity>
+				 <!-- instructions表 -->
+				 <entity name="instructions" pk="iid"
+						query="SELECT iid,isource FROM instructions where mid = '${mediciedetails.mid}'">
+						<field column="iid"       		  	name="iid" />
+						<field column="isource"       		  	name="isource" />
+						
+				 </entity>
+				 
+				 <!-- record表 -->
+				 <!--<entity name="record" 
+						query="select rtime,rreference from record where mid = '${mediciedetails.mid}'">
+						<field column="rtime"       		  	name="rtime" />
+						<field column="rreference"       		  	name="rreference" />
+				 </entity>-->
+         </entity>
+
+		
+		 
+		 
+		 
+    </document>
+</dataConfig>

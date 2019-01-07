@@ -1,0 +1,15 @@
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	text-decoration: none;
+	border: 0px;
+	list-style-type: none;
+}
+
+#container {
+	width: 910px;
+	height: 705px;
+	margin-left: 10px;
+	margin-top: 2px;
+}

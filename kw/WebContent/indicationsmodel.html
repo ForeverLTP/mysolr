@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+<link type="text/css" rel="stylesheet" href="css/common.css" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+<!-- 先加载jq之后才加载js,否则报错(bootstrap) -->
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<style type="text/css">
+.title {
+	font-size: 16px;
+	font-weight: bolder;
+}
+
+.panel-group {
+	margin-top: 20px;
+}
+</style>
+
+</head>
+<body>
+	<div id="container">
+
+		<ul class="nav nav-pills">
+			<li><a href="init.action">首页</a></li>
+			<li><a href="#">知识科普</a></li>
+			<li><a href="IndicationsInit.action">处方信息</a></li>
+			<li class="dropdown"><a class="dropdown-toggle"
+				data-toggle="dropdown" href="#">合理用药规则库 <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="initInteraction.action">相互作用</a></li>
+					<li><a href="initSpecial.action">特殊人群用药</a></li>
+				</ul></li>
+			<li class="dropdown"><a class="dropdown-toggle"
+				data-toggle="dropdown" href="#">合理用药知识库 <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="getInstruction.action">说明书</a></li>
+					<li><a href="getLiterature.action">文献知识库</a></li>
+					<li><a href="initDiseaseCure.action">疾病诊治标准</a></li>
+					<li><a href="indicationsmodel.html">标准处方模板</a></li>
+					<li><a href="advice.html">标准医嘱模板</a></li>
+				</ul></li>
+			<li><a href="#">系统设置</a></li>
+		</ul>
+
+		<div class="panel-group" id="accordion">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion"
+							href="#collapseOne" class="title">医嘱的书写要求及格式</a>
+					</h4>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse int">
+					<div class="panel-body">
+						处方格式由三部分组成 ：<br/>
+						1、书写处方必须用蓝黑水笔 , 不得用铅笔或圆珠笔（复写纸处方可用蓝黑圆珠笔） 。
+				
+						<br/>（一）前记 ：包括医疗机构名称，处方编号，费别、农合医保号码、患者姓名、性别、
+						年龄、门诊或住院病历号，科别或病室和床位号、临床诊断、开具日期等，并可添列专科要求的项目。....详情请<a href="downLoad.action?downloadUrl=doc/indicationsmodel.pdf&suffix=pdf">查看</a>
+
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion"
+							href="#collapseTwo" class="title">标准处方模板一 </a>
+					</h4>
+				</div>
+				<div id="collapseTwo" class="panel-collapse collapse">
+					<div class="panel-body"><input type="image" src="images/indicationmodel/i1.gif"/></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
